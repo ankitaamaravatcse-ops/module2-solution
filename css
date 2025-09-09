@@ -1,9 +1,4 @@
-/* Reset + box-sizing */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: Arial, sans-serif;
@@ -12,73 +7,45 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 2em;
   margin-bottom: 30px;
 }
 
-/* General section styling */
-.row {
-  width: 100%;
-}
+.row { width: 100%; }
 
 section {
   position: relative;
   border: 1px solid black;
   background-color: #f1f1f1;
   margin: 10px;
-  padding: 40px 15px 15px; /* top padding leaves space for title box */
+  padding: 40px 15px 15px; /* leave space for the title box */
 }
 
-section p {
-  font-size: 1em;
-  line-height: 1.4em;
-}
-
-/* Title box */
 .title {
   position: absolute;
   top: 0;
   right: 0;
   border: 1px solid black;
-  background-color: #ffc107;
   padding: 5px 15px;
-  font-size: 1.25em;
   font-weight: bold;
+  background-color: #ffc107;
 }
 
-/* Different colors for each section title */
-.col1 .title { background-color: #ff9999; } /* chicken */
-.col2 .title { background-color: #99ccff; } /* beef */
-.col3 .title { background-color: #99ff99; } /* sushi */
+.col1 .title { background-color: #ff9999; }
+.col2 .title { background-color: #99ccff; }
+.col3 .title { background-color: #99ff99; }
 
-/* ===== Desktop view (≥992px) ===== */
+/* Desktop (≥992px): 3 columns */
 @media (min-width: 992px) {
-  .col {
-    float: left;
-    width: 31%;
-    margin: 10px 1%;
-  }
+  .col { float: left; width: 31%; margin: 10px 1%; }
 }
 
-/* ===== Tablet view (768px–991px) ===== */
+/* Tablet (768px–991px): 2 columns + 1 full width */
 @media (min-width: 768px) and (max-width: 991px) {
-  .col1, .col2 {
-    float: left;
-    width: 48%;
-    margin: 10px 1%;
-  }
-  .col3 {
-    clear: both;
-    width: 98%;
-    margin: 10px 1%;
-  }
+  .col1, .col2 { float: left; width: 48%; margin: 10px 1%; }
+  .col3 { clear: both; width: 98%; margin: 10px 1%; }
 }
 
-/* ===== Mobile view (≤767px) ===== */
+/* Mobile (≤767px): stack vertically */
 @media (max-width: 767px) {
-  .col {
-    width: 100%;
-    margin: 10px 0;
-  }
+  .col { width: 100%; margin: 10px 0; }
 }
-
