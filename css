@@ -1,4 +1,4 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+{ box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: Arial, sans-serif;
@@ -39,13 +39,13 @@ section {
   .col { float: left; width: 31%; margin: 10px 1%; }
 }
 
-/* Tablet (768px–991px): 2 columns + 1 full width */
+/* Tablet (768px–991px): 2 columns + 1 full width 
 @media (min-width: 768px) and (max-width: 991px) {
   .col1, .col2 { float: left; width: 48%; margin: 10px 1%; }
   .col3 { clear: both; width: 98%; margin: 10px 1%; }
-}
+}*/
 
 /* Mobile (≤767px): stack vertically */
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   .col { width: 100%; margin: 10px 0; }
-}
+}*/
