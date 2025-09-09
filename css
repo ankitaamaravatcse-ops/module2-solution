@@ -1,1 +1,84 @@
+/* Reset + box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* General section styling */
+.row {
+  width: 100%;
+}
+
+section {
+  position: relative;
+  border: 1px solid black;
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 40px 15px 15px; /* top padding leaves space for title box */
+}
+
+section p {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+/* Title box */
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid black;
+  background-color: #ffc107;
+  padding: 5px 15px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+/* Different colors for each section title */
+.col1 .title { background-color: #ff9999; } /* chicken */
+.col2 .title { background-color: #99ccff; } /* beef */
+.col3 .title { background-color: #99ff99; } /* sushi */
+
+/* ===== Desktop view (≥992px) ===== */
+@media (min-width: 992px) {
+  .col {
+    float: left;
+    width: 31%;
+    margin: 10px 1%;
+  }
+}
+
+/* ===== Tablet view (768px–991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col1, .col2 {
+    float: left;
+    width: 48%;
+    margin: 10px 1%;
+  }
+  .col3 {
+    clear: both;
+    width: 98%;
+    margin: 10px 1%;
+  }
+}
+
+/* ===== Mobile view (≤767px) ===== */
+@media (max-width: 767px) {
+  .col {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 
